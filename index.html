@@ -1,245 +1,168 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Your Surviving Job · Will your job survive the end of the world?</title>
-<meta name="description" content="Your Surviving Job is a YouTube channel of animated POV survival stories: one ordinary job, sixty days, and a world that has stopped working. Would you make it?">
-<meta name="theme-color" content="#0c0e0e">
+<title>Your Surviving Job</title>
+<meta name="description" content="Your Surviving Job is an animated survival series on YouTube. Every story drops one ordinary job into the end of the world for sixty days. Would yours get you through?">
+<meta name="theme-color" content="#0a0a09">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Your Surviving Job">
-<meta property="og:title" content="Your Surviving Job · Will your job survive the end of the world?">
-<meta property="og:description" content="Animated POV survival stories. One ordinary job. Sixty days. Would you make it?">
+<meta property="og:title" content="Your Surviving Job · Your shift starts now">
+<meta property="og:description" content="An animated survival series. One ordinary job. Sixty days at the end of the world.">
 <meta property="og:image" content="https://hyyank.github.io/img/og.jpg">
 <meta property="og:url" content="https://hyyank.github.io/">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=League+Gothic&family=Special+Elite&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="img/hero.webp">
 <link rel="stylesheet" href="style.css">
+<script>document.documentElement.classList.remove("no-js")</script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Organization","name":"Your Surviving Job","url":"https://hyyank.github.io/","logo":"https://hyyank.github.io/img/avatar.jpg","sameAs":["https://www.youtube.com/@YourSurvivingJob"]}
 </script>
 </head>
 <body>
+<div class="grain" aria-hidden="true"></div>
 
-<header class="nav" id="nav">
-  <div class="wrap">
-    <a class="brand" href="#top"><img src="img/avatar.jpg" alt=""><span>Your Surviving Job</span></a>
-    <button class="menu-btn" id="menuBtn" aria-label="Menu" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
-    <nav class="nav-links" id="navLinks">
-      <a href="#files">Case files</a>
-      <a href="#how">How it works</a>
-      <a href="#lineup">The lineup</a>
-      <a href="#rules">Survival rules</a>
-      <a href="#trailers">Trailers</a>
-    </nav>
-    <a class="btn btn-red" href="https://www.youtube.com/@YourSurvivingJob?sub_confirmation=1" target="_blank" rel="noopener">Subscribe</a>
+<div class="loader" aria-hidden="true">
+  <div class="loader-inner">
+    <svg viewBox="0 0 520 70" preserveAspectRatio="none"><path id="ecg" d="M0 40 H180 L196 40 L206 18 L218 62 L230 4 L244 52 L252 40 H520"/></svg>
+    <div class="loader-day">DAY <span id="loaderDay">00</span></div>
   </div>
+</div>
+
+<header class="bar">
+  <a class="wordmark" href="#top">Your Surviving Job</a>
+  <nav class="bar-right">
+    <a class="opt" href="#jobs">The jobs</a>
+    <a class="opt" href="#reel">Watch</a>
+    <a href="https://www.youtube.com/@YourSurvivingJob?sub_confirmation=1" target="_blank" rel="noopener">Subscribe</a>
+  </nav>
 </header>
 
 <main id="top">
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="hero-bg">
-      <video id="heroVideo" src="media/hero.mp4" poster="media/hero_poster.jpg" autoplay muted loop playsinline preload="auto" aria-hidden="true"></video>
+  <!-- 1 · HERO: the cursor is a torch -->
+  <section class="hero" id="hero" aria-label="Your shift starts now">
+    <div class="hero-media" data-hero-media>
+      <img src="img/hero.webp" alt="A lone worker with a torch on an empty overpass above a dead city at blue hour; the dead wait in the shadows below.">
     </div>
-    <div class="wrap">
-      <p class="kicker">Case archive · Zombie apocalypse</p>
-      <h1>Will your job<br><span class="blood" id="blood">survive</span> the end<br>of the world?</h1>
-      <p class="lede">Animated survival stories told from your point of view. One ordinary job, sixty days, and a world that has stopped working. The skills you clock in with decide whether you clock out.</p>
-      <div class="hero-cta">
-        <button class="btn btn-red" id="watchNewest"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 4v16l13-8z"/></svg>Watch the newest file</button>
-        <a class="btn btn-ghost" href="https://www.youtube.com/@YourSurvivingJob" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12 31 31 0 0 0 1 16.8a3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8zM9.7 15.1V8.9l5.8 3.1z"/></svg>Open the channel</a>
+    <div class="torch" id="torch" aria-hidden="true"></div>
+    <div class="torch-glow" id="torchGlow" aria-hidden="true"></div>
+    <canvas class="embers" id="embers" aria-hidden="true"></canvas>
+    <div class="hero-shade" aria-hidden="true"></div>
+    <div class="hero-copy">
+      <h1 data-hero-title><span class="mask"><span>Your shift</span></span><br><span class="mask"><span><em class="serif">starts</em> now.</span></span></h1>
+      <div class="hero-meta" data-hero-meta>
+        <p>An animated survival series. Every story drops one ordinary job into the end of the world, and gives it sixty days.</p>
+        <span class="torch-hint"><i></i>Move your torch</span>
       </div>
-      <div class="stats">
-        <div class="stat"><b data-count="files">0</b><span>case files open</span></div>
-        <div class="stat"><b>60</b><span>days in every story</span></div>
-        <div class="stat"><b data-count="rules">0</b><span>survival rules</span></div>
-        <div class="stat"><b>1</b><span>job between you and them</span></div>
-      </div>
-    </div>
-    <div class="scroll-cue" aria-hidden="true"></div>
-  </section>
-
-  <div class="ticker" aria-hidden="true"><div class="ticker-track" id="ticker"></div></div>
-
-  <!-- NEWEST FILE -->
-  <section id="newest">
-    <div class="wrap reveal">
-      <p class="kicker">Just declassified</p>
-      <h2 class="h-sec">The newest <em>file</em></h2>
-      <div class="feature" id="feature"></div>
     </div>
   </section>
 
-  <!-- CASE FILES -->
-  <section id="files">
-    <div class="wrap">
-      <div class="files-head reveal">
-        <div>
-          <p class="kicker">The archive</p>
-          <h2 class="h-sec">Every case <em>file</em></h2>
-          <p class="lede">Pick a job. Open the file. Find out how far its skills carry you when the sirens stop.</p>
+  <!-- 2 · MANIFESTO: lights word by word -->
+  <section class="manifesto" aria-label="About the channel">
+    <div class="eyebrow">The idea</div>
+    <p id="manifesto">Every story starts on an <span class="hot">ordinary shift.</span> A firefighter. A surgeon. A bus driver. Then the world <span class="hot">breaks,</span> and the only thing you carried in with you is <span class="hot">what you know how to do.</span></p>
+  </section>
+
+  <!-- 3 · THE JOBS: pinned horizontal gallery -->
+  <section class="jobs" id="jobs" aria-label="The jobs">
+    <div class="jobs-track" id="jobsTrack">
+      <div class="jobs-intro">
+        <div class="eyebrow">The jobs</div>
+        <h2>One job.<br><em class="serif">Sixty days.</em></h2>
+        <p>Every video hands the end of the world to a different profession. What it knows decides who gets through the first night, the first month, and the way out.</p>
+      </div>
+      <figure class="job"><div class="job-frame"><img src="img/jobs/firefighter.webp" alt="A firefighter in a red helmet alone in a burning street"></div>
+        <figcaption><span class="num">01</span><h3>Firefighter</h3><p>Knows how smoke moves, and how to move through it.</p></figcaption></figure>
+      <figure class="job"><div class="job-frame"><img src="img/jobs/surgeon.webp" alt="A surgeon in teal scrubs in a dark hospital corridor"></div>
+        <figcaption><span class="num">02</span><h3>Surgeon</h3><p>Steady hands when everything else is shaking.</p></figcaption></figure>
+      <figure class="job"><div class="job-frame"><img src="img/jobs/pilot.webp" alt="An airline pilot holding a red flare beside a dark airliner"></div>
+        <figcaption><span class="num">03</span><h3>Airline Pilot</h3><p>Reads weather, fuel and fear, then decides.</p></figcaption></figure>
+      <figure class="job"><div class="job-frame"><img src="img/jobs/soldier.webp" alt="A soldier on a foggy harbour quay at dawn"></div>
+        <figcaption><span class="num">04</span><h3>Soldier</h3><p>Holds a line when nobody else will.</p></figcaption></figure>
+      <figure class="job"><div class="job-frame"><img src="img/jobs/busdriver.webp" alt="A bus driver beside a yellow school bus at dusk"></div>
+        <figcaption><span class="num">05</span><h3>Bus Driver</h3><p>Counts every head, every single time.</p></figcaption></figure>
+      <figure class="job"><div class="job-frame"><img src="img/jobs/superstar.webp" alt="A pop star alone on a dark stadium stage under a spotlight"></div>
+        <figcaption><span class="num">06</span><h3>Superstar</h3><p>Can turn a whole crowd around. Even this one.</p></figcaption></figure>
+      <div class="jobs-outro">And the next one<br>might be <em>yours.</em></div>
+    </div>
+  </section>
+
+  <!-- 4 · THE FORMAT: day counter scrubs 00 → 60 -->
+  <section class="format" id="format" aria-label="How every story works">
+    <div class="format-bg" aria-hidden="true">
+      <img src="img/trapped.webp" alt="">
+      <img src="img/breakout.webp" alt="">
+      <img src="img/closed.webp" alt="">
+    </div>
+    <div class="format-inner">
+      <div class="eyebrow">How every story works</div>
+      <div class="day"><small>DAY</small><span id="dayNum">00</span></div>
+      <div>
+        <div class="acts">
+          <div class="act"><h3><b>Trapped.</b></h3><p>Days 0 to 30. Hold one building. Ration the water. Learn one survival rule at a time, the hard way.</p></div>
+          <div class="act"><h3><b>Breakout.</b></h3><p>Days 31 to 60. Cross a dead world with the people you chose to keep.</p></div>
+          <div class="act"><h3><b>File closed.</b></h3><p>Day 60. The job is scored on three things: trapped, breakout, together. Then the stamp comes down.</p></div>
         </div>
-        <div class="chips" id="chips" role="group" aria-label="Filter by kind of job"></div>
-      </div>
-      <div class="grid" id="grid"></div>
-    </div>
-  </section>
-
-  <!-- HOW IT WORKS -->
-  <section id="how">
-    <div class="wrap">
-      <div class="reveal">
-        <p class="kicker">Inside every file</p>
-        <h2 class="h-sec">Sixty days. <em>Two acts.</em> One verdict.</h2>
-        <p class="lede" style="color:#d8d2c6">Every story is one long video in ten parts. You are the hero, the narrator talks to you, and nothing in your training was written for this.</p>
-      </div>
-      <div class="timeline">
-        <article class="step reveal" style="--r:-1.6deg">
-          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M24 5 3 42h42z"/><path d="M24 19v11M24 35.5v.5"/></svg>
-          <div class="day">DAY 0</div><h4>The world breaks</h4>
-          <p>An ordinary shift. Then the first one turns, and you are the person on duty.</p>
-        </article>
-        <article class="step reveal" style="--r:1.2deg">
-          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><rect x="8" y="6" width="32" height="38" rx="2"/><path d="M16 6v38M24 6v38M32 6v38"/></svg>
-          <div class="day">DAYS 1 – 30</div><h4>Trapped</h4>
-          <p>Hold one building. Ration food and water. Learn a new survival rule in every part.</p>
-        </article>
-        <article class="step reveal" style="--r:-.8deg">
-          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M4 30h14l4-14 6 24 4-10h12"/></svg>
-          <div class="day">DAY 30</div><h4>The cliff</h4>
-          <p>Something forces you out. Staying put is no longer an option.</p>
-        </article>
-        <article class="step reveal" style="--r:1.8deg">
-          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 24h30M26 12l12 12-12 12"/><path d="M42 8v32"/></svg>
-          <div class="day">DAYS 31 – 60</div><h4>Breakout</h4>
-          <p>Cross a dead city with the people you chose to save. Your job's one big move.</p>
-        </article>
-        <article class="step reveal" style="--r:-1.2deg">
-          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><rect x="6" y="10" width="36" height="28" rx="2"/><path d="M12 18h14M12 24h20M12 30h10"/><circle cx="35" cy="28" r="4"/></svg>
-          <div class="day">DAY 60</div><h4>File closed</h4>
-          <p>The job is scored. A mystery stays open. The stamp comes down.</p>
-        </article>
-      </div>
-
-      <div class="verdicts">
-        <div class="sc-card reveal" id="scCard">
-          <h4>The scorecard</h4>
-          <p class="sub" id="scSub">Sample · Soldier file</p>
-          <div class="score" id="scScore" style="color:var(--paper-ink)"></div>
-          <div class="verdict" id="scVerdict"></div>
-          <img class="final-stamp" src="img/stamp.png" alt="File closed">
-        </div>
-        <div class="verdict-list reveal">
-          <div style="--c:#e06a5d"><b>TRAPPED</b><p>How well the job holds a building for thirty days.</p></div>
-          <div style="--c:#e0b14f"><b>BREAKOUT</b><p>How well it gets you across a dead world.</p></div>
-          <div style="--c:#9cc46f"><b>TOGETHER</b><p>How many people it lets you keep alive. Every job ends as EXPENDABLE, FUNCTIONAL or an ASSET.</p></div>
-        </div>
+        <div class="rail"><i id="rail"></i><span style="left:0">00</span><span style="left:50%">30</span><span style="left:100%">60</span></div>
       </div>
     </div>
   </section>
 
-  <!-- LINEUP -->
-  <section id="lineup">
-    <div class="wrap">
-      <div class="reveal">
-        <p class="kicker">Step forward</p>
-        <h2 class="h-sec">The <em>lineup</em></h2>
-        <p class="lede">Every hero so far, by job. Tap one to open their file. The dark ones at the end are already sealed and waiting their turn.</p>
-      </div>
-      <div class="lineup reveal" id="lineupBox">
-        <div class="lineup-wall" id="lineupWall">
-          <span class="ht" style="top:40px">7′</span><span class="ht" style="top:120px">6′</span><span class="ht" style="top:200px">5′</span><span class="ht" style="top:280px">4′</span><span class="ht" style="top:360px">3′</span>
-        </div>
-      </div>
-      <div class="lineup-note"><span>← scroll the lineup →</span><span>Guess the sealed jobs in the comments</span></div>
+  <!-- 5 · THE REEL -->
+  <section class="reel" id="reel" aria-label="Watch">
+    <div class="reel-head">
+      <h2>See it<br><em class="serif">move.</em></h2>
+      <p>Hand-built stick-figure animation, painted worlds and a narrator who talks only to you. Long stories, twenty to forty minutes each.</p>
+    </div>
+    <a class="reel-frame" id="reelFrame" href="https://www.youtube.com/@YourSurvivingJob/videos" target="_blank" rel="noopener" aria-label="Watch the series on YouTube">
+      <video src="media/reel.mp4" poster="img/reel.webp" muted loop playsinline preload="none" aria-hidden="true"></video>
+      <span class="reel-play">Watch<br>on YouTube</span>
+    </a>
+    <div class="stats">
+      <div class="stat"><b data-count="15">15</b><span>stories so far</span></div>
+      <div class="stat"><b data-count="60">60</b><span>days in every one</span></div>
+      <div class="stat"><b data-count="143">143</b><span>survival rules learned</span></div>
     </div>
   </section>
 
-  <!-- RULES -->
-  <section id="rules">
-    <div class="wrap rules-grid">
-      <div class="reveal">
-        <p class="kicker">Learn something before it's too late</p>
-        <h2 class="h-sec">Draw a <em>survival rule</em></h2>
-        <p class="lede">Every part of every story teaches one real rule. They work in a storm, a blackout or a flood as well as in a zombie apocalypse.</p>
-        <div class="rule-actions">
-          <button class="btn btn-red" id="drawRule"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M3 12a9 9 0 0 1 15.5-6.2L21 8M21 3v5h-5M21 12a9 9 0 0 1-15.5 6.2L3 16M3 21v-5h5"/></svg>Draw another</button>
-        </div>
+  <!-- 6 · FINAL CALL -->
+  <section class="call" aria-label="Subscribe">
+    <div class="call-bg" data-parallax><img src="img/dawn.webp" alt="Seven survivors with different jobs stand on a rooftop at sunrise over a quiet ruined city" loading="lazy"></div>
+    <div class="call-copy">
+      <div class="eyebrow">A new job every week</div>
+      <h2>What would<br><em class="serif">your</em> job do?</h2>
+      <p>Tell us your profession in the comments. It might be the next one on shift when the world ends.</p>
+      <div class="ctas">
+        <a class="btn btn-ember" href="https://www.youtube.com/@YourSurvivingJob?sub_confirmation=1" target="_blank" rel="noopener">Subscribe <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 11 11 3M5 3h6v6"/></svg></a>
+        <a class="btn btn-line" href="https://www.youtube.com/@YourSurvivingJob/videos" target="_blank" rel="noopener">Start watching <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 11 11 3M5 3h6v6"/></svg></a>
       </div>
-      <div class="note reveal" aria-live="polite">
-        <div class="label" id="ruleLabel">SURVIVAL RULE 6</div>
-        <p class="rule-text" id="ruleText">Ladders stop them; stairs don't.</p>
-        <div class="from"><span id="ruleFrom">From the file of the Fighter Pilot</span><a href="#" id="ruleOpen">Open the file →</a></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- TRAILERS -->
-  <section id="trailers">
-    <div class="wrap">
-      <div class="reveal">
-        <p class="kicker">60 seconds each</p>
-        <h2 class="h-sec">Watch the <em>trailers</em></h2>
-        <p class="lede">A minute of each file. Tap to play with sound.</p>
-      </div>
-      <div class="reel" id="reel"></div>
-    </div>
-  </section>
-
-  <!-- CTA -->
-  <section class="cta">
-    <div class="cta-bg" aria-hidden="true"></div>
-    <div class="wrap reveal">
-      <p class="kicker">New file every week</p>
-      <h2 class="h-sec">Your job could<br>be <em>next.</em></h2>
-      <p class="lede">Nurse, chef, teacher, plumber, astronaut? Tell us your job in the comments of the newest video, and subscribe so you are on duty when the next file opens.</p>
-      <div class="hero-cta">
-        <a class="btn btn-red" href="https://www.youtube.com/@YourSurvivingJob?sub_confirmation=1" target="_blank" rel="noopener">Subscribe on YouTube</a>
-        <a class="btn btn-ghost" id="commentLink" href="https://www.youtube.com/@YourSurvivingJob" target="_blank" rel="noopener">Suggest your job</a>
-      </div>
-      <div class="worlds"><span class="on">Zombie outbreak</span><span>AI takeover</span><span>Alien invasion</span><span>Ultimate chaos</span></div>
     </div>
   </section>
 </main>
 
 <footer>
-  <div class="wrap">
-    <div class="foot">
-      <div>
-        <a class="brand" href="#top"><img src="img/avatar.jpg" alt=""><span>Your Surviving Job</span></a>
-        <p style="margin:0;max-width:380px">Exploring how ordinary professions survive zombie outbreaks, AI takeovers, alien invasions and ultimate chaos.</p>
-      </div>
-      <div>
-        <h5>Watch</h5>
-        <a href="https://www.youtube.com/@YourSurvivingJob/videos" target="_blank" rel="noopener">All videos</a>
-        <a href="https://www.youtube.com/@YourSurvivingJob/shorts" target="_blank" rel="noopener">Shorts</a>
-        <a href="https://www.youtube.com/@YourSurvivingJob/playlists" target="_blank" rel="noopener">Playlists</a>
-      </div>
-      <div>
-        <h5>Channel</h5>
-        <a href="mailto:dungocminhhoang@gmail.com">dungocminhhoang@gmail.com</a>
-        <a href="privacy.html">Privacy policy</a>
-        <a href="terms.html">Terms of service</a>
-      </div>
-    </div>
-    <div class="fineprint">
-      <span>© 2026 Your Surviving Job</span>
-      <span>Fiction. Stories are made for entertainment; survival tips are general knowledge, not professional advice.</span>
-    </div>
+  <div class="foot-row">
+    <span>Zombie outbreak · AI takeover · Alien invasion · Ultimate chaos</span>
+    <nav>
+      <a href="https://www.youtube.com/@YourSurvivingJob" target="_blank" rel="noopener">YouTube</a>
+      <a href="mailto:dungocminhhoang@gmail.com">Contact</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+    </nav>
   </div>
+  <div class="giant" aria-hidden="true"><span>Your Surviving Job</span></div>
+  <div class="fine"><span>© 2026 Your Surviving Job</span><span>Fiction, made for entertainment. Survival tips are general knowledge, not professional advice.</span></div>
 </footer>
 
-<div class="modal" id="modal" role="dialog" aria-modal="true" aria-label="Case file">
-  <button class="modal-close" id="modalClose" aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
-  <div class="modal-box" id="modalBox"></div>
-</div>
-
-<script src="data/cases.js"></script>
-<script src="site.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+<script src="main.js"></script>
 </body>
 </html>
